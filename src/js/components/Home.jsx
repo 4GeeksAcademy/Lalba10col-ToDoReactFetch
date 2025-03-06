@@ -59,10 +59,12 @@ const Home = () => {
 		} catch (error) {
 			console.log(error)
 		}
-	}
+	};
+
 	useEffect(() => {
 		getTodos();
 	}, [])
+	
 	return (
 		<div className='container'>
 			<div className='row'>
@@ -89,6 +91,9 @@ const Home = () => {
 									<i className="fas fa-trash-alt" onClick={() => {
 										deleteTodo(todo.id);
 									}}></i>
+
+//<input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+//</input><input class="form-check-input" type="checkbox" value=""/>
 								</div>
 							)
 						})}
